@@ -57,16 +57,16 @@
             "#ff003c"
         ],
         "CHANNELS_DEFAULT": [
-            "#72eaf8"
+            "#ff003c"
         ],
         "CHAT_BACKGROUND": [
             "#000000"
         ],
         "HEADER_PRIMARY": [
-            "#72eaf8"
+            "#ff003c"
         ],
         "HEADER_SECONDARY": [
-            "#72eaf8"
+            "#ff003c"
         ],
         "HOME_BACKGROUND": [
             "#170005"
@@ -115,7 +115,7 @@
         "BRAND_260": "#ff003c",
         "BRAND_360": "#ff003c",
         "BRAND_500": "#ff003c",
-        "GREEN_100": "#72eaf8",
+        "GREEN_100": "#ff003c",
         "GREEN_130": "#ff003c",
         "GREEN_160": "#ff003c",
         "GREEN_200": "#ff003c",
@@ -146,9 +146,9 @@
         "GUILD_BOOSTING_PURPLE_FOR_GRADIENTS": "#ff003c",
         "PRIMARY_100": "#610017",
         "PRIMARY_230": "#ff003c",
-        "PRIMARY_300": "#72eaf8",
-        "PRIMARY_360": "#72eaf8",
-        "PRIMARY_400": "#72eaf8",
+        "PRIMARY_300": "#ff003c",
+        "PRIMARY_360": "#ff003c",
+        "PRIMARY_400": "#ff003c",
         "PRIMARY_460": "#000000",
         "PRIMARY_500": "#ff003c",
         "PRIMARY_600": "#000000",
