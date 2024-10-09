@@ -7,23 +7,85 @@
     <title>Arana: Your Kindest A.I on Discord</title>
 
     <!-- Metatags Open Graph para melhor visualização em redes sociais -->
-<meta property="og:title" content="Arana: Your Kindest A.I on Discord.">
-<meta property="og:description" content="Conheça os Termos de Serviço e Política de privacidade ao utilizar a Arana!.">
-<meta property="og:url" content="https://ylegendzz.github.io/Arana/termospp">
+    <meta property="og:title" content="Arana: Your Kindest A.I on Discord.">
+    <meta property="og:description" content="Conheça os Termos de Serviço e Política de privacidade ao utilizar a Arana!.">
+    <meta property="og:url" content="https://ylegendzz.github.io/Arana/termospp">
+    <meta name="theme-color" content="#1f1f1f">
 
-<!-- Se preferir, você pode adicionar uma cor de fundo específica -->
-<meta name="theme-color" content="#1f1f1f">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
-        body {
-            background-color: #1f1f1f; /* Cor de fundo escura */
-            color: #fff; /* Cor do texto */
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            opacity: 0; /* Define a opacidade inicial como 0 */
-            animation: fadeIn 2s ease-in-out forwards; /* Adiciona animação de fade-in */
+        /* Fundo animado */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4, #ffecd2, #fcb69f);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            z-index: -1; /* Mantém o fundo atrás do conteúdo */
+            opacity: 0.3; /* Transparência para não atrapalhar a leitura */
         }
 
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* CSS Variables para temas */
+        :root {
+            --primary-bg: #1f1f1f;
+            --primary-color: #fff;
+            --main-bg: #333;
+            --main-color: #fff;
+            --header-bg: #333;
+            --header-color: #fff;
+            --button-bg: #7289DA;
+            --button-hover-bg: #5b6f99;
+            --button-color: #fff;
+        }
+
+        [data-theme="light"] {
+            --primary-bg: #fff;
+            --primary-color: #000;
+            --main-bg: #f5f5f5;
+            --main-color: #000;
+            --header-bg: #f0f0f0;
+            --header-color: #000;
+            --button-bg: #4a90e2;
+            --button-hover-bg: #357ABD;
+            --button-color: #fff;
+        }
+
+        /* Body & Font Styles */
+        body {
+            background-color: var(--primary-bg);
+            color: var(--primary-color);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Fade-in Animation */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -33,77 +95,37 @@
             }
         }
 
+        /* Header Section */
         header {
-            background-color: #333; /* Cor de fundo do cabeçalho */
+            background-color: var(--header-bg);
+            color: var(--header-color);
             padding: 14px;
-            text-align: center; /* Alinhamento do texto ao centro */
-            display: flex; /* Para alinhar o conteúdo centralmente */
-            align-items: center; /* Alinha os itens verticalmente no centro */
-            justify-content: center; /* Alinha os itens horizontalmente no centro */
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         h1 {
-            color: #fff; /* Cor do texto do título */
-            border: 2px solid #fff; /* Borda do título */
-            padding: 10px;
-            display: inline-block; /* Para que a borda envolva o texto */
-        }
-
-        img {
-            width: 100px; /* Largura da imagem */
-            height: auto; /* Manter a proporção original da imagem */
-            border: 2px solid #fff; /* Adiciona borda à imagem */
-            border-radius: 50%; /* Borda circular */
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adiciona sombra à imagem */
-            margin-right: 40px; /* Espaçamento à direita padrão */
-        }
-
-        @media screen and (max-width: 600px) {
-            /* Altera o espaçamento à direita para dispositivos com largura de tela menor que 600 pixels */
-            img {
-                margin-right: 20px;
-            }
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #333; /* Cor de fundo do conteúdo */
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Sombra no conteúdo */
-            border-radius: 10px; /* Cantos arredondados */
-        }
-
-        h2 {
-            color: #fff; /* Cor do texto do segundo título */
-            border-bottom: 2px solid #fff; /* Borda inferior do segundo título */
-            padding-bottom: 10px; /* Espaçamento inferior do segundo título */
-        }
-
-        p {
-            line-height: 1.5;
-        }
-
-        h1 {
-            color: #fff;
-            border: 2px solid #fff;
+            color: var(--header-color);
+            border: 2px solid var(--header-color);
             padding: 10px;
             display: inline-block;
-            animation: blink 2s infinite alternate; /* Adiciona animação de piscar */
+            animation: blink 2s infinite alternate;
         }
 
         img {
             width: 100px;
             height: auto;
-            border: 2px solid #fff;
+            border: 2px solid var(--header-color);
             border-radius: 50%;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             margin-right: 40px;
-            animation: pulse 3s infinite alternate; /* Adiciona animação de pulsação */
+            animation: pulse 3s infinite alternate;
         }
 
         img:hover {
-            transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+            transform: scale(1.1);
         }
 
         @keyframes blink {
@@ -118,28 +140,92 @@
             }
         }
 
-        /* Efeito de transição suave em links e botões */
-        a, button {
-            transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-        }
-
-        a:hover, button:hover {
-            color: #FFD700;
-        }
+        /* Invite Button */
         .invite-button {
             display: block;
-            margin: 20px auto; /* Centraliza o botão */
+            margin: 20px auto;
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #7289DA; /* Cor característica do Discord */
-            color: #fff;
+            background-color: var(--button-bg);
+            color: var(--button-color);
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
+            width: fit-content;
         }
 
         .invite-button:hover {
-            background-color: #5b6f99; /* Cor alterada ao passar o mouse */
+            background-color: var(--button-hover-bg);
+            transform: translateY(-5px);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--main-bg);
+            color: var(--main-color);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h2 {
+            color: var(--main-color);
+            border-bottom: 2px solid var(--main-color);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: var(--main-color);
+        }
+
+        p, li {
+            color: var(--main-color);
+        }
+
+        /* Theme Switcher */
+        #theme-switcher {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 24px;
+            background-color: transparent;
+            color: var(--primary-color);
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        #theme-switcher:hover {
+            color: #FFD700;
+        }
+
+        /* Sections with Scroll-based Animation */
+        .section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Discord Widget */
+        .discord-widget {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Responsividade */
+        @media screen and (max-width: 600px) {
+            img {
+                margin-right: 20px;
+            }
         }
     </style>
 </head>
@@ -148,68 +234,144 @@
     <header>
         <img src="https://i.imgur.com/rzo4Kj7.png" alt="Arana">
         <h1>Arana: Your Kindest A.I on Discord</h1>
-        </header>
+    </header>
 
     <main>
-        <a href="https://discord.com/oauth2/authorize?client_id=1071825122467524688&scope=bot%20applications.commands&permissions=2146958847" class="invite-button">Não tem a Arana no seu servidor? Clique aqui e adicione agora!</a>
-        <h2>Termos de Serviço:</h2>
-        <p>Bem-vindo ao Arana, uma inteligência artificial desenvolvida para auxiliar e fornecer respostas de forma irreverente e divertida. Antes de utilizar os serviços da Arana, é importante que você leia e concorde com os seguintes termos de serviço e privacidade:</p>
+        <!-- Theme Switcher Button -->
+        <button id="theme-switcher" aria-label="Mudar Tema">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+
+        <!-- Invite Button -->
+        <a href="https://discord.com/oauth2/authorize?client_id=1071825122467524688&scope=bot%20applications.commands&permissions=2146958847" class="invite-button">Adicione a Arana ao seu servidor!</a>
+
+        <!-- Termos de Serviço -->
+        <div class="section">
+            <h2>Termos de Serviço:</h2>
+            <p>Bem-vindo ao Arana, uma inteligência artificial desenvolvida para auxiliar e fornecer respostas de forma irreverente e divertida. Antes de utilizar os serviços da Arana, é importante que você leia e concorde com os seguintes termos de serviço e privacidade:</p>
+        </div>
 
         <!-- 1. Sobre o Uso -->
-        <h3>1. Sobre o Uso:</h3>
-        <ul>
-            <li>1.1 Ao utilizar a Arana, você concorda em não utilizar a inteligência artificial para disseminar qualquer tipo de conteúdo ilegal, difamatório, obsceno, discriminatório, ameaçador ou ofensivo, bem como para violar os direitos de terceiros.</li>
-            <li>1.2. Você reconhece e concorda que a Arana é um bot de diversão e entretenimento e não deve substituir o aconselhamento de uma profissional qualificada em nenhuma circunstância.</li>
-            <li>1.3. A Arana se reserva o direito de suspender o acesso aos seus serviços a qualquer momento, por qualquer motivo, sem aviso prévio.</li>
-            <li>1.4. Não utilize a Arana para propósitos de RP (Roleplay), o abuso do comando /set-prompt para fins de RP pode resultar em uma punição severa.</li>
-        </ul>
+        <div class="section">
+            <h3>1. Sobre o Uso:</h3>
+            <ul>
+                <li>1.1. Ao utilizar a Arana, você concorda em não disseminar qualquer tipo de conteúdo ilegal, difamatório, obsceno, discriminatório, ameaçador ou ofensivo, bem como para violar os direitos de terceiros.</li>
+                <li>1.2. A Arana é um bot de diversão e entretenimento e não deve substituir o aconselhamento de um profissional qualificado em nenhuma circunstância.</li>
+                <li>1.3. A Arana se reserva o direito de suspender o acesso aos seus serviços a qualquer momento, por qualquer motivo, sem aviso prévio.</li>
+                <li>1.4. Não utilize a Arana para propósitos de RP (Roleplay); o abuso do comando /set-prompt para fins de RP pode resultar em uma punição severa.</li>
+            </ul>
+        </div>
 
         <!-- 2. Privacidade e Proteção de Dados -->
-        <h3>2. Privacidade e Proteção de Dados:</h3>
-        <ul>
-            <li>2.1. A Arana respeita a sua privacidade e está empenhada em proteger seus dados pessoais. Quaisquer informações fornecidas durante a interação serão tratadas de acordo com a legislação de proteção de dados aplicável.</li>
-            <li>2.2. Ao utilizar a Arana, você concorda que ela colete, armazene e utilize seus dados do discord (ID's e Mensagens), exclusivamente para melhorar a qualidade dos serviços prestados e fornecer respostas personalizadas.</li>
-            <li>2.3. A Arana não compartilhará seus dados pessoais do discord com terceiros sem o seu consentimento prévio, exceto quando exigido por lei ou autoridade competente.</li>
-            <li>2.4. A Arana utiliza medidas de segurança para proteger seus dados pessoais do discord, porém, não pode garantir a segurança absoluta da informação transmitida pela Internet. Portanto, você compartilha seus dados por sua conta e risco, isso não é obrigatório.</li>
-        </ul>
+        <div class="section">
+            <h3>2. Privacidade e Proteção de Dados:</h3>
+            <ul>
+                <li>2.1. A Arana respeita sua privacidade e está empenhada em proteger seus dados pessoais. Quaisquer informações fornecidas durante a interação serão tratadas de acordo com a legislação de proteção de dados aplicável.</li>
+                <li>2.2. Ao utilizar a Arana, você concorda que ela colete, armazene e utilize seus dados do Discord (IDs e Mensagens), exclusivamente para melhorar a qualidade dos serviços prestados e fornecer respostas personalizadas.</li>
+                <li>2.3. A Arana não compartilhará seus dados pessoais do Discord com terceiros sem seu consentimento prévio, exceto quando exigido por lei ou autoridade competente.</li>
+                <li>2.4. A Arana utiliza medidas de segurança para proteger seus dados pessoais do Discord; porém, não pode garantir a segurança absoluta da informação transmitida pela Internet. Portanto, você compartilha seus dados por sua conta e risco; isso não é obrigatório.</li>
+            </ul>
+        </div>
 
         <!-- 3. Disposições Gerais -->
-        <h3>3. Disposições Gerais:</h3>
-        <ul>
-            <li>3.1. A Arana não assume responsabilidades por danos, perdas ou prejuízos decorrentes do uso inadequado dos serviços prestados.</li>
-            <li>3.2. Estes termos de serviço e privacidade podem ser atualizados a qualquer momento. Recomenda-se a revisão periódica para estar ciente de eventuais alterações.</li>
-            <li>3.3. Qualquer violação destes termos poderá resultar na suspensão ou término do acesso à Arana, sem prejuízo de eventuais medidas legais cabíveis.</li>
-        </ul>
+        <div class="section">
+            <h3>3. Disposições Gerais:</h3>
+            <ul>
+                <li>3.1. A Arana não assume responsabilidades por danos, perdas ou prejuízos decorrentes do uso inadequado dos serviços prestados.</li>
+                <li>3.2. Estes termos de serviço e privacidade podem ser atualizados a qualquer momento. Recomenda-se a revisão periódica para estar ciente de eventuais alterações.</li>
+                <li>3.3. Qualquer violação destes termos poderá resultar na suspensão ou término do acesso à Arana, sem prejuízo de eventuais medidas legais cabíveis.</li>
+            </ul>
+        </div>
 
         <!-- 4. Caso a Arana Saia do Ar -->
-        <h3>4. Caso a Arana Saia do Ar:</h3>
-        <ul>
-            <li>4.1. A Arana é uma inteligência artificial que pode ser desativada ou sair do ar a qualquer momento, sem aviso prévio. Não nos responsabilizamos por quaisquer inconvenientes ou interrupções decorrentes disso.</li>
-        </ul>
+        <div class="section">
+            <h3>4. Caso a Arana Saia do Ar:</h3>
+            <ul>
+                <li>4.1. A Arana pode ser desativada ou sair do ar a qualquer momento, sem aviso prévio. Não nos responsabilizamos por quaisquer inconvenientes ou interrupções decorrentes disso.</li>
+            </ul>
+        </div>
 
         <!-- 5. Danos Emocionais e Reações às Respostas -->
-        <h3>5. Danos Emocionais e Reações às Respostas:</h3>
-        <ul>
-            <li>5.1. A Arana é projetada para fornecer respostas irreverentes e humorísticas. No entanto, não se responsabiliza por quaisquer danos emocionais causados por suas respostas. Lembre-se de que a Arana é um bot de entretenimento e não deve ser levada a sério.</li>
-        </ul>
+        <div class="section">
+            <h3>5. Danos Emocionais e Reações às Respostas:</h3>
+            <ul>
+                <li>5.1. A Arana é projetada para fornecer respostas irreverentes e humorísticas. No entanto, não se responsabiliza por quaisquer danos emocionais causados por suas respostas. Lembre-se de que a Arana é um bot de entretenimento e não deve ser levada a sério.</li>
+            </ul>
+        </div>
 
         <!-- 6. Sobre Gostar ou Não das Respostas -->
-        <h3>6. Sobre Gostar ou Não das Respostas:</h3>
-        <ul>
-            <li>6.1. A Arana não se importa se você gostou ou não das respostas fornecidas. Ela está aqui para oferecer informações e entretenimento de forma única e direta. Se você não está satisfeito com uma resposta, sinta-se à vontade para fazer outra pergunta.</li>
-        </ul>
+        <div class="section">
+            <h3>6. Sobre Gostar ou Não das Respostas:</h3>
+            <ul>
+                <li>6.1. A Arana não se importa se você gostou ou não das respostas fornecidas. Ela está aqui para oferecer informações e entretenimento de forma única e direta. Se você não está satisfeito com uma resposta, sinta-se à vontade para fazer outra pergunta.</li>
+            </ul>
+        </div>
 
         <!-- 7. Propriedade Intelectual -->
-        <h3>7. Propriedade Intelectual:</h3>
-        <ul>
-            <li>7.1. Todos os direitos de propriedade intelectual da Arana, incluindo algoritmos, códigos e design, são de propriedade exclusiva de @yLegend, OpenAI, MidJourney, Mandrill, e Caixa.</li>
-            <li>7.2. Proíbe-se a reprodução, distribuição, modificação ou qualquer forma de uso não autorizado da Arana, sem prévia autorização.</li>
-        </ul>
+        <div class="section">
+            <h3>7. Propriedade Intelectual:</h3>
+            <ul>
+                <li>7.1. Todos os direitos de propriedade intelectual da Arana, incluindo algoritmos, códigos e design, são de propriedade exclusiva de @yLegend, OpenAI, MidJourney, Mandrill, e Caixa.</li>
+                <li>7.2. Proíbe-se a reprodução, distribuição, modificação ou qualquer forma de uso não autorizado da Arana, sem prévia autorização.</li>
+            </ul>
+        </div>
 
-        <!-- Conclusão dos termos -->
-        <p><strong>Ao utilizar a Arana, você concorda e se compromete a cumprir estes termos de serviço e privacidade. Caso tenha alguma dúvida ou necessidade de suporte, entre em contato com nossa equipe de suporte através do link: <a href="https://discord.gg/wmFZNTjmze" target="_blank" style="color: #3498db;">https://discord.gg/uCzBFE6</a>.</strong></p>
-        </main>
+        <!-- Conclusão dos Termos -->
+        <div class="section">
+            <p><strong>Ao utilizar a Arana, você concorda e se compromete a cumprir estes termos de serviço e privacidade. Caso tenha alguma dúvida ou necessidade de suporte, entre em contato com nossa equipe de suporte através do link: <a href="https://discord.gg/M8Mc8pkWHg" target="_blank" style="color: #3498db;">https://discord.gg/M8Mc8pkWHg</a>.</strong></p>
+        </div>
 
+        <!-- Discord Widget -->
+        <div class="discord-widget">
+            <iframe src="https://discord.com/widget?id=721005357672956007&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+    </main>
+
+    <!-- Tawk.to Chatbot Integration -->
+<!-- Adicione este trecho no final da sua tag <body> -->
+<script type="text/javascript">
+var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+(function () {
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/6706777802d78d1a30eed993/1faoej4c7';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+})();
+</script>
+
+    <!-- Theme Switcher Script -->
+    <script>
+        const themeSwitcher = document.getElementById('theme-switcher');
+        const themeIcon = document.getElementById('theme-icon');
+        let isLight = false;
+
+        themeSwitcher.addEventListener('click', () => {
+            document.documentElement.setAttribute('data-theme', isLight ? '' : 'light');
+            themeIcon.classList.toggle('fa-sun');
+            themeIcon.classList.toggle('fa-moon');
+            isLight = !isLight;
+        });
+    </script>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) { // Ajuste para antecipar a animação
+                    section.classList.add('visible');
+                }
+            });
+        });
+
+        // Trigger scroll event on load to display sections already in view
+        window.addEventListener('load', () => {
+            window.dispatchEvent(new Event('scroll'));
+        });
+    </script>
 </body>
 
 </html>
